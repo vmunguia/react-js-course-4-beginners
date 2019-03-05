@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+
+	<body>
+		<div id="container"></div>
+		
+		<script src="../js/react.min.js"></script>
+		<script src="../js/react-dom.min.js"></script>
+
+		<script>
+			var letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+
+			var lets = letters.map(function(letters) {
+				return React.createElement(
+						'li',
+						null,
+						letters);
+			});
+
+			ReactDOM.render(
+					React.createElement(
+							'ol',
+							null,
+							lets),
+					document.getElementById('container'));
+		</script>
+	</body>
+</html>
