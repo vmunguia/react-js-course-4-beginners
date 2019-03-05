@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+
+	<body>
+		<div id="container"></div>
+		
+		<script src="../js/react.min.js"></script>
+		<script src="../js/react-dom.min.js"></script>
+
+		<script>
+			function time() {
+				var element = React.createElement(
+						'div',
+						null,
+						'The time now is: ',
+						new Date().toLocaleTimeString(),
+						'.'
+				);
+
+				ReactDOM.render(element, document.getElementById('container'));
+			}
+
+			setInterval(time, 1000);
+		</script>
+	</body>
+</html>
