@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+
+	<body>
+		<div id="container"></div>
+		
+		<script src="../js/react.min.js"></script>
+		<script src="../js/react-dom.min.js"></script>
+
+		<script>
+			function cars(list) {
+				return React.createElement(
+						'h2',
+						null,
+						'Car brands: ',
+						list.brand
+				);
+			}
+
+			function output() {
+				return React.createElement(
+						'div',
+						null,
+						React.createElement(cars, {brand: "BMW"}),
+						React.createElement(cars, {brand: "Mercedez"}),
+						React.createElement(cars, {brand: "Audi"}),
+						React.createElement(cars, {brand: "Infiniti"}),
+						React.createElement(cars, {brand: "Lexus"}),
+						React.createElement(cars, {brand: "BMW"})
+				);
+			}
+
+			ReactDOM.render(React.createElement(output, null), document.getElementById('container'));
+		</script>
+	</body>
+</html>
