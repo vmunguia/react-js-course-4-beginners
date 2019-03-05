@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+
+	<body>
+		<p>10 + 5 = 15</p>
+
+		<div id="container"></div>
+		
+		<script src="../js/react.min.js"></script>
+		<script src="../js/react-dom.min.js"></script>
+
+		<script>
+			function correct(sum) {
+				return React.createElement(
+						'h1',
+						null,
+						'It is correct !!'
+				);
+			}
+
+			function wrong(sum) {
+				return React.createElement(
+						'h1',
+						null,
+						'It is wrong !!'
+				);
+			}
+
+			function result(sum) {
+				var addition = sum.addition;
+
+				if (addition) {
+					return React.createElement(correct, null);
+				}
+
+				return React.createElement(wrong, null);
+			}
+
+			ReactDOM.render(React.createElement(result, {addition: true}), document.getElementById('container'));
+		</script>
+	</body>
+</html>
