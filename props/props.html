@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+
+	<body>
+		<div id="container"></div>
+		
+		<script src="../js/react.min.js"></script>
+		<script src="../js/react-dom.min.js"></script>
+		<script src="../js/babel.min.js" charset="utf-8"></script>
+		<script type="text/babel">
+			var Car = React.createClass({
+				render: function() {
+					return(
+						<h1>My car brand is: {this.props.brand}</h1>
+					);
+				}
+			});
+			
+			ReactDOM.render(
+				<div><Car brand = "BMW"/></div>,
+				document.getElementById('container')
+			);
+		</script>
+	</body>
+</html>
