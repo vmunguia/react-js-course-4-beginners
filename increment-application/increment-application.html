@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+
+	<body>
+		<div id="container"></div>
+		
+		<script src="../js/react.min.js"></script>
+		<script src="../js/react-dom.min.js"></script>
+		<script src="../js/babel.min.js" charset="utf-8"></script>
+		<script type="text/babel">
+			var Plus = React.createClass({
+				getInitialState: function() {
+					return {
+						total: 0
+					}
+				},
+
+				plusOne: function() {
+					this.setState({
+						total: this.state.total + 1
+					});
+				},
+
+				render: function() {
+					return(
+						<div>
+							<button type="button" onClick={this.plusOne}>+1</button>
+							<h2>Total: {this.state.total}</h2>
+						</div>
+					);
+				}
+			});
+			
+			ReactDOM.render(
+				<div><Plus /></div>,
+				document.getElementById('container')
+			);
+		</script>
+	</body>
+</html>
