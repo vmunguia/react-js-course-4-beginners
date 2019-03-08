@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+
+	<body>
+		<div id="container"></div>
+		
+		<script src="../js/react.min.js"></script>
+		<script src="../js/react-dom.min.js"></script>
+		<script src="../js/babel.min.js" charset="utf-8"></script>
+		<script type="text/babel">
+			function System(os) {
+				const operating_system = os.operating_system;
+
+				if (operating_system) {
+					return(<h1>You choose Windows</h1>);
+				} else {
+					return(<h1>You choose Linux</h1>);
+				}
+			}
+			
+			ReactDOM.render(
+				<div>
+					<System operating_system = {true} />
+					<System operating_system = {false} />
+				</div>,
+				document.getElementById('container')
+			);
+		</script>
+	</body>
+</html>
